@@ -21,6 +21,12 @@ Source edition can be found on github.
   different object stores, or if the deprecated `standby` field is `true`. See
   [Configuration checks at start](/pipelines/checkpoint-sync#configuration-checks-at-start).
 
+- Security: connector errors, debug log lines, and compile errors that
+  printed a whole configuration, URI, or option value now name the endpoint
+  and the option only, so a resolved secret reference does not reach the
+  pipeline log or `deployment_error` through them. See
+  [secret references](/connectors/secret-references#diagnostics).
+
 ## v0.382.0
 
 - Incompatible change (support bundles): in new collections,
